@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <title>VS Media Test</title>
+</head>
+<body>
+  <h1>JavaScript - Candidate Test</h1>
+  <h2>Groceries Shopping List</h2>
+
+  <label for="sorting">Choose a sorting method:</label>
+  <select name="sorting" id="sorting">
+    <option value="alphabetical">A-Z</option>
+    <option value="reverse-alphabetical">Z-A</option>
+    <option value="shortest-greatest">Shortest First</option>
+    <option value="greatest-shortest">Longest First</option>
+  </select>
+
+  <div id="list">
+      <div class="list-item">
+        <div class="list-item-contents">
+          Product: Milk <br> Qty: 12 <br>
+        </div>
+        <br>
+        <button><i class="fas fa-pencil-alt"></i></button>
+        <button><i class="fas fa-trash-alt"></i></button>
+      </div>
+  </div>
+
+  <form id='new-item-form'>
+    <h3>Add New Item</h3>
+    <!-- <label for="product-name">PRODUCT: </label> -->
+    <input type="text" id='product-name' placeholder="Product Name"> <br>
+    <!-- <label for="product-qty">QTY: </label> -->
+    <input type="text" id='product-qty' placeholder="Qty of Items"> <br>
+    <button>Submit</button>
+  </form>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
