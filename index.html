@@ -8,37 +8,63 @@
   <title>VS Media Test</title>
 </head>
 <body>
-  <h1>JavaScript - Candidate Test</h1>
-  <h2>Groceries Shopping List</h2>
+  <div class="container">
+    <h1>JavaScript - Candidate Test</h1>
+    <h3>List of Items</h3>
 
-  <label for="sorting">Choose a sorting method:</label>
-  <select name="sorting" id="sorting">
-    <option value="alphabetical">A-Z</option>
-    <option value="reverse-alphabetical">Z-A</option>
-    <option value="shortest-greatest">Shortest First</option>
-    <option value="greatest-shortest">Longest First</option>
-  </select>
 
-  <div id="list">
-      <div class="list-item">
-        <div class="list-item-contents">
-          Product: Milk <br> Qty: 12 <br>
-        </div>
-        <br>
-        <button><i class="fas fa-pencil-alt"></i></button>
-        <button><i class="fas fa-trash-alt"></i></button>
-      </div>
+    <input type="text" id="filterInput" placeholder="Search items...">
+
+    <div class="input-field col s12">
+      <select name="sorting" id="sorting">
+        <option value="" disabled selected>Choose your sorting method:</option>
+        <option value="alphabetical">A-Z</option>
+        <option value="reverse">Z-A</option>
+        <option value="shortest">Shortest Length First</option>
+        <option value="longest">Longest Length First</option>
+        <option value="least">Least Qty First</option>
+        <option value="greatest">Greatest Qty First</option>
+      </select>
+    </div>
+
+    <ul class="collection" id="list">
+      <li class="list-item collection-item">
+        <label class="list-item-name">Bananas</label>
+        <input type="text">
+        <label class="list-item-count">30</label>
+        <input type="text">
+        <button class="edit">Edit</button> 
+        <button class="delete">Delete</button>
+      </li>
+      <li class="list-item collection-item">
+        <label class="list-item-name">Eggs</label>
+        <input type="text">
+        <label class="list-item-count">2</label>
+        <input type="text">
+        <button class="edit">Edit</button> 
+        <button class="delete">Delete</button>
+      </li>
+
+      <li class="list-item collection-item">
+        <label class="list-item-name">Ribeye Steak</label>
+        <input type="text">
+        <label class="list-item-count">7</label>
+        <input type="text">
+        <button class="edit">Edit</button> 
+        <button class="delete">Delete</button>
+      </li>
+    </ul>
+
+    <form id='new-item-form'>
+      <h3>Add New Item</h3>
+      <label for="product-name">PRODUCT: </label>
+      <input type="text" id='product-name' placeholder="Avocados"> <br>
+      <label for="product-qty">QTY: </label>
+      <input type="text" id='product-qty' placeholder="12"> <br>
+      <button>Submit</button>
+    </form>
+
   </div>
-
-  <form id='new-item-form'>
-    <h3>Add New Item</h3>
-    <!-- <label for="product-name">PRODUCT: </label> -->
-    <input type="text" id='product-name' placeholder="Product Name"> <br>
-    <!-- <label for="product-qty">QTY: </label> -->
-    <input type="text" id='product-qty' placeholder="Qty of Items"> <br>
-    <button>Submit</button>
-  </form>
-  
 
   <script src="app.js"></script>
 </body>

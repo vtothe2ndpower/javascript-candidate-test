@@ -1,14 +1,140 @@
-* {
-	background: lightblue;
+/* Basic Style */
+body {
+	background: rgb(222, 217, 253);
+	color: #333;
+	font-family: Lato, sans-serif;
 }
 
-h1,
-h2,
+.container {
+	display: block;
+	width: 400px;
+	margin: 100px auto 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li * {
+	float: left;
+}
+
+li {
+	clear: both;
+	list-style: none;
+}
+
+input,
+button {
+	outline: none;
+}
+
+button {
+	background: none;
+	border: 0px;
+	color: #888;
+	font-size: 15px;
+	width: 60px;
+	margin: 10px 0 0;
+	font-family: Lato, sans-serif;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #333;
+}
+
+/* Heading */
 h3 {
+	color: #333;
+	font-weight: 700;
+	font-size: 15px;
+	border-bottom: 2px solid #333;
+	padding: 30px 0 10px;
+	margin: 0;
+	text-transform: uppercase;
 	text-align: center;
 }
 
-i,
-button {
+input[type="text"] {
+	margin: 10px;
+	font-size: 18px;
+	line-height: 18px;
+	height: 18px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 6px;
+	font-family: Lato, sans-serif;
+	color: #888;
+}
+input[type="text"]:focus {
+	color: #333;
+}
+#filterInput {
+	display: block;
+	margin: 10px auto;
+}
+
+#sorting {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 15ch;
+	max-width: 30ch;
+	border: 1px solid var(--select-border);
+	border-radius: 0.25em;
+	padding: 0.25em 0.5em;
+	font-size: 1rem;
 	cursor: pointer;
+	line-height: 1.1;
+	background-color: #fff;
+	background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+/* New Entry */
+label[for='new-task'] {
+	display: block;
+	margin: 0 0 20px;
+}
+input#new-task {
+	float: left;
+	width: 318px;
+}
+p > button:hover {
+	color: #0fc57c;
+}
+
+/* Entries list */
+li {
+	overflow: hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+}
+
+li > label {
+	font-size: 18px;
+	line-height: 40px;
+	width: 237px;
+	padding: 0 0 0 11px;
+}
+li > input[type="text"] {
+	width: 226px;
+}
+li > .delete:hover {
+	color: #cf2323;
+}
+
+/* Edit Entry */
+ul li input[type=text] {
+	display: none;
+}
+
+ul li.editMode input[type=text] {
+	display: block;
+}
+
+ul li.editMode label {
+	display: none;
 }
