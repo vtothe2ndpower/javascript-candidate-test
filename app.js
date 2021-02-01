@@ -48,6 +48,7 @@ form.addEventListener('submit', function(e) {
   li.appendChild(editButton);
   li.appendChild (document.createTextNode(" "));
   li.appendChild(deleteButton);
+  bindTaskEvents(li);
   container.appendChild(li)
   form.reset();
 });
@@ -196,6 +197,11 @@ sortingMethod.onchange = function(e) {
 
   };
 
+// Handle the delete
+var deleteButtons = container.querySelectorAll('button.delete');
+
+console.log(deleteButtons)
+
 // Edit an existing entry
 var editEntry = function() {
   console.log("Editing entry...");
@@ -249,3 +255,15 @@ for (var i = 0; i < list.children.length; i++) {
   //bind events to list item's children (taskCompleted)	
   bindTaskEvents(list.children[i]);
 }
+
+
+
+
+
+// How to have an inital render alphabetically & when a new item is added
+
+// On initial page load - sort everything alphabetically
+// window.onload = function(e) {
+//   console.log('Page Loaded!');
+// }
+
