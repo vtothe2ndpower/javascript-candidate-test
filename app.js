@@ -22,7 +22,7 @@ form.addEventListener('submit', function(e) {
   }
 
   var li = document.createElement('li');
-  li.classList.add('list-item', 'collection-item');
+  li.classList.add('list-item');
 
   var nameLabel = document.createElement("label");
   nameLabel.classList.add('list-item-name');
@@ -63,8 +63,8 @@ function filterItems(e) {
 
   const ul = container;
   // Get li's from ul
-  var li = ul.querySelectorAll('li.collection-item');
-  // Loop through collection-item li's
+  var li = ul.querySelectorAll('li.list-item');
+  // Loop through list-item li's
   for (var i = 0; i < li.length; i++) {
     var name = li[i].getElementsByClassName('list-item-name')[0];
 
